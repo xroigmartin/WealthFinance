@@ -3,7 +3,7 @@ name: wealth-finance-stack
 services:
   analyz_corp_db:
     image: postgres:17
-    container_name: analyz_corp_db
+    container_name: wealth_finance_db
     restart: unless-stopped
     networks:
       - wealth_finance_internal
@@ -37,7 +37,7 @@ volumes:
     driver: local
 
 networks:
-  analyz_corp_internal:
+  wealth_finance_internal:
     driver: bridge
     name: wealth_finance_internal
 
